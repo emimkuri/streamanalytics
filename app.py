@@ -14,9 +14,15 @@ st.set_page_config(layout="wide")
 # Load data from Azure Blob Storage
 @st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_data():
-    # Connect to Azure Blob Storage
-    connection_string = "yfqMW8gf8u+M5pOW33Q5gtRTFBJQXStVK4K2rlCVVzxlrRG21Sh7MVj06uExoL86Npb7HWWgxYUe+ASthUr6/g=="
+    # Use this EXACT format (replace placeholders with your real values)
+    connection_string = (
+        "DefaultEndpointsProtocol=https;"
+        "AccountName=iesstsabdbaa;"  # Just the name, no URLs
+        "AccountKey=yfqMW8gf8u+M5pOW33Q5gtRTFBJQXStVK4K2rlCVVzxlrRG21Sh7MVj06uExoL86Npb7HWWgxYUe+ASthUr6/g==;"
+        "EndpointSuffix=core.windows.net"
+    )
     container_name = "group7"
+    # Rest of your function...
     
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     
