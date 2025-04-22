@@ -15,8 +15,8 @@ st.set_page_config(layout="wide")
 @st.cache_data(ttl=3600)  # Cache for 1 hour
 def load_data():
     # Connect to Azure Blob Storage
-    connection_string = st.secrets["AZURE_STORAGE_CONNECTION_STRING"]
-    container_name = st.secrets["AZURE_CONTAINER_NAME"]
+    connection_string = "yfqMW8gf8u+M5pOW33Q5gtRTFBJQXStVK4K2rlCVVzxlrRG21Sh7MVj06uExoL86Npb7HWWgxYUe+ASthUr6/g=="
+    container_name = "group7"
     
     blob_service_client = BlobServiceClient.from_connection_string(connection_string)
     
